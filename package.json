@@ -18,6 +18,9 @@
     "commander": ">=1.2.0",
     "colors": ">=0.6"
   },
+  "scripts": {
+    "postinstall": "./lib/postinstall.js"
+  },
   "keywords": [
     "meteor",
     "scaffolding",
