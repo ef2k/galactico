@@ -19,7 +19,7 @@
     "colors": ">=0.6"
   },
   "scripts": {
-    "postinstall": "./lib/postinstall.js"
+    "postinstall": "node scripts/install.js"
   },
   "keywords": [
     "meteor",
