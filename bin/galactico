@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+/*
+ * Galactico
+ * http://github.com/eddflrs/galactico
+ * @author Eddie Flores
+ * @license MIT License
+ */
+
+
+var scaffolder = require('../lib/scaffolder');
+var program = require('commander');
+
+program.version('0.0.1');
+
+program
+  .command('init')
+  .description('Builds a directory structure.')
+  .action(function () {
+    scaffolder.build();
+  });
+
+program.parse(process.argv);

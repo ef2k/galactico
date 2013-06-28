@@ -1,0 +1,29 @@
+{
+  "name": "galactico",
+  "version": "0.0.1",
+  "description": "Galactico scaffolds a directory structure for your meteor projects.",
+  "main": "./bin",
+  "bin": {
+    "gco": "bin/galactico",
+    "galactico": "bin/galactico"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/eddflrs/galactico"
+  },
+  "dependencies": {
+    "commander": ">=1.2.0",
+    "colors": ">=0.6"
+  },
+  "keywords": [
+    "meteor",
+    "scaffolding",
+    "meteorite",
+    "directory"
+  ],
+  "author": "Eddie Flores",
+  "license": "MIT"
+}
