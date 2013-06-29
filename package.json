@@ -1,6 +1,6 @@
 {
   "name": "galactico",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Galactico scaffolds a directory structure for your meteor projects.",
   "main": "index.js",
   "bin": {
