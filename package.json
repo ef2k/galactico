@@ -2,13 +2,10 @@
   "name": "galactico",
   "version": "0.0.1",
   "description": "Galactico scaffolds a directory structure for your meteor projects.",
-  "main": "./bin",
+  "main": "index.js",
   "bin": {
     "gco": "bin/galactico",
     "galactico": "bin/galactico"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -19,7 +16,7 @@
     "colors": ">=0.6"
   },
   "scripts": {
-    "postinstall": "node scripts/install.js"
+    "postinstall": "node install.js"
   },
   "keywords": [
     "meteor",

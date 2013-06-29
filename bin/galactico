@@ -7,7 +7,6 @@
  * @license MIT License
  */
 
-
 var scaffolder = require('../lib/scaffolder');
 var program = require('commander');
 
