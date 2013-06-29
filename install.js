@@ -3,16 +3,15 @@
 var fs = require('fs')
   , path = require('path');
 
-
-// Make a symbolic link to the templates directory.
-
 var galacticoDir = path.join(process.env.HOME, '.galactico');
-var moduleDir = path.resolve(__dirname, 'templates');
+var templatesDir = path.resolve(__dirname, 'templates');
 
-fs.symlink(moduleDir, galacticoDir, 'dir', function (err) {
-  if (!err) {
-    console.log('Successfully created the .galactico folder!');
-  } else {
-    console.error('Failed to create the .galactico folder');
-  }
+if (!fs.existsSync(galacticoDir)) {
+  fs.mkdirSync(galacticoDir);
+}
+
+require('fs').readdirSync(templatesDir).forEach(function (file) {
+  file = path.join(templatesDir, file);
+  var outPath = path.join(galacticoDir, path.basename(file));
+  fs.createReadStream(file).pipe(fs.createWriteStream(outPath, {flags: 'w'}));
 });

@@ -1,10 +1,10 @@
 var path = require('path');
 
 var templates = {};
-var modulePath =  path.resolve(__dirname, 'templates');
+var galacticoDir = path.join(process.env.HOME, '.galactico');
 
-require('fs').readdirSync(modulePath).forEach(function (file) {
-  var template = require('./templates/' + file).template;
+require('fs').readdirSync(galacticoDir).forEach(function (file) {
+  var template = require(path.resolve(galacticoDir, file)).template;
   templates[template.name] = template;
 });
 

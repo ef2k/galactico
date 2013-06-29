@@ -10,13 +10,13 @@
 var scaffolder = require('../lib/scaffolder');
 var program = require('commander');
 
-program.version('0.0.1');
+program.version('0.0.3');
 
 program
-  .command('init')
+  .command('init [name]')
   .description('Builds a directory structure.')
-  .action(function () {
-    scaffolder.build();
+  .action(function (name) {
+    scaffolder.build(name);
   });
 
 program.parse(process.argv);
