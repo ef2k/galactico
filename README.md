@@ -43,7 +43,7 @@ var singlepage = {
   name: 'singlepage',
   description: 'A single page website',
   directories: ['css', 'js'],
-  files: ['index.html', css/master.css', 'js/main.js']
+  files: ['index.html', 'css/master.css', 'js/main.js']
 };
 
 exports.template = singlepage;
